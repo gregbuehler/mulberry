@@ -1,0 +1,24 @@
+{
+  "config": {
+    "bind": "0.0.0.0:9999",
+    "expires": 0
+  },
+  "groups": [
+    {
+      "source": "foo-lb:80",
+      "dest": [
+        "a.example.com:80",
+        "b.example.com:80",
+        "c.example.com:80"
+      ]
+    },
+    {
+      "source": "bar-lb:443",
+      "dest": [
+        "d.example.com:443",
+        "e.example.com:443",
+        "f.example.com:443"
+      ]
+    }
+  ]
+}
